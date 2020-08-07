@@ -29,7 +29,7 @@ namespace sample_design_patterns
         //Depending on the domain this migth include BDD with behave or ServerSpec, InSpec, etc
         public abstract void IntegrationTest();
 
-        
+
         //In this step we typically metadata in a supply chain like Grafeas
         public abstract void RecordMetadata();
 
@@ -38,7 +38,7 @@ namespace sample_design_patterns
         public abstract void CryptoSignAssets();
 
         public abstract void Destroy();
-        
+
         public void Build(String repoApiToken, String repoURL, String branch)
         {
             Prepare(repoApiToken, repoURL, branch);
