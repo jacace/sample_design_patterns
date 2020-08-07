@@ -39,6 +39,8 @@ namespace sample_design_patterns
 
         public abstract void Destroy();
 
+        public abstract void PublishAPIm();
+
         public void Build(String repoApiToken, String repoURL, String branch)
         {
             Prepare(repoApiToken, repoURL, branch);
@@ -59,6 +61,7 @@ namespace sample_design_patterns
             Task.WaitAll(release, supplyChain);
 
             Destroy();
+            PublishAPIm();
         }
 
     }
