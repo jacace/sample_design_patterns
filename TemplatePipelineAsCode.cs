@@ -25,6 +25,7 @@ namespace sample_design_patterns
         public abstract void RecordMetadata();
         public abstract void CreateRelease();
         public abstract void CryptoSignAssets();
+        public abstract void Destroy();
         public void Build(String repoApiToken, String repoURL, String branch)
         {
             Prepare(repoApiToken, repoURL, branch);
@@ -44,7 +45,7 @@ namespace sample_design_patterns
             Task supplyChain = Task.Run(() => RecordMetadata());
             Task.WaitAll(release, supplyChain);
 
-            //Forked steps end
+            Destroy();
         }
 
     }
