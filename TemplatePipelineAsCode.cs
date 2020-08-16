@@ -12,7 +12,7 @@ namespace sample_design_patterns
         public abstract void Prepare(String repoApiToken, String repoURL, String branch);
 
         //In this function the correct compiler is used, e.g.: tsc or CoffeeScript 
-        public abstract void BuildNode();
+        public abstract void Build();
 
         //In this fucntion typically a static analysis or linter takes place
         public abstract void LintSource();
@@ -41,7 +41,7 @@ namespace sample_design_patterns
 
         public abstract void PublishAPIm();
 
-        public void Build(String repoApiToken, String repoURL, String branch)
+        public void Run(String repoApiToken, String repoURL, String branch)
         {
             Prepare(repoApiToken, repoURL, branch);
 
@@ -49,7 +49,7 @@ namespace sample_design_patterns
             Task policing = Task.Run(() => RunPolicyAsCode());
             Task.WaitAll(linting, policing);
 
-            BuildNode();
+            Build();
             UnitTest();
             PackageAssets();
             CryptoSignAssets();

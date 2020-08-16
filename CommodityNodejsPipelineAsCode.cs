@@ -7,7 +7,7 @@ namespace sample_design_patterns
     public class CommodityNodejsPipelineAsCode : TemplatePipelineAsCode
     {
         //In this Step usually the clean-up, cred setup and git clone takes place
-        public override void BuildNode()
+        public override void Build()
         {
             throw new NotImplementedException();
         }
