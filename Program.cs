@@ -8,7 +8,7 @@ namespace sample_design_patterns
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("Sample call!");
         }
     }
 }
