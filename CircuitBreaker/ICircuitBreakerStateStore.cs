@@ -2,7 +2,7 @@ using System;
 
 public interface ICircuitBreakerStateStore
 {
-    CircuitBreakerStateEnum State { get; }
+    public CircuitBreakerStateEnum State { get; }
 
     Exception LastException { get; }
 
