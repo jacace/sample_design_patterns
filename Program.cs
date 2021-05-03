@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 //dotnet new console
 
@@ -21,6 +23,12 @@ namespace sample_design_patterns
             CICDPipeline pipeline = new CICDPipeline(new CICDBuildStragey());
             pipeline.Build();
 
+            //4-Sample of State Pattern: the context in this case (Booking) refers to the state to perform state specific behaviour
+            Booking booking = Booking.CreateNew("jacace");
+            PendingState state = new PendingState();
+            state.Accept(booking); //why not directly call booking.TransitionToState?
+
         }
     }
+
 }
