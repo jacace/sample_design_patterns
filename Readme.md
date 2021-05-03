@@ -1,6 +1,7 @@
 This repo is a collection of Architecture and Design Patterns. Currently tehre are four implementations:
 
-#1 CircuitBreaker: Improved implementation of https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
+#1 CircuitBreaker: improvement of https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker: it detects failures (by retainig the state of the connection over a series of requests) in a protected function and prevents the application from trying to perform the action that is doomed to fail until it's safe to retry. It keeps an internal state machine.
+
 
 #2.TemplateMethodDesignPattern: This class implements the Template Pattern (based on Template method) in hypothetical Pipelines As Code
 
