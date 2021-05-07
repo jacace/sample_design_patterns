@@ -28,6 +28,20 @@ namespace sample_design_patterns
             PendingState state = new PendingState();
             state.Accept(booking); //why not directly call booking.TransitionToState?
 
+            //5-Abstract Factory
+            RecipeFactory kitchenFactory = null;
+            Console.WriteLine("Are you an (A) adult or (B) child?");
+            char response = Console.ReadKey().KeyChar;
+            switch (response)
+            {
+                case 'A':
+                    kitchenFactory = new AdultCuisineFactory();
+                    break;
+                default:
+                    kitchenFactory = new KidsCuisineFactory();
+                    break;
+            }
+
             //6-Factory Method
             CarFactory factory = new CarFactory();
             ICar objCar = factory.BuildCar(CarType.PorscheMacan);

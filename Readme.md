@@ -9,7 +9,9 @@ This repo is a collection of Architecture and Design Patterns. Currently tehre a
 
 #4 State Pattern: allows an object to alter its behaviour when its internal state changes, so it keeps track of the state similar to finite state machines, similar to an implementation of the strategy pattern.
 
-#6 Factory method
+#5 Abstract Factory: family of related factories (i.e.: many)
+
+#6 Factory method: one concrete factory
 
 TODOs: 
 #a Some methods have little variations so they can be implemented in teh base class too, e.g.: git clone, publish to an APIm management system, etc
