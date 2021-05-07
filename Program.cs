@@ -28,6 +28,9 @@ namespace sample_design_patterns
             PendingState state = new PendingState();
             state.Accept(booking); //why not directly call booking.TransitionToState?
 
+            //6-Factory Method
+            CarFactory factory = new CarFactory();
+            ICar objCar = factory.BuildCar(CarType.PorscheMacan);
         }
     }
 
