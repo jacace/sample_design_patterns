@@ -10,6 +10,10 @@ namespace sample_design_patterns
     {
         static void Main(string[] args)
         {
+            //7-Table driven method / Control table
+            MonthWrapper objMonth=new MonthWrapper();
+            string localizedMonthName=objMonth.getMonthName("ES", 1);
+            
             //1-Sample of the CircuitBreaker Design Pattern
             CircuitBreaker objCircuit = new CircuitBreaker();
             objCircuit.ExecuteAction(null);

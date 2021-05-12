@@ -13,6 +13,8 @@ This repo is a collection of Architecture and Design Patterns. Currently tehre a
 
 #6 Factory method: one concrete factory
 
+#7 Table Driven Table / Control Table 
+
 TODOs: 
 #a Some methods have little variations so they can be implemented in teh base class too, e.g.: git clone, publish to an APIm management system, etc
 

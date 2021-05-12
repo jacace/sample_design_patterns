@@ -13,8 +13,8 @@ namespace sample_design_patterns
             translations.Add("EN", enTranslations);
 
             Dictionary<int, string> esTranslations=new Dictionary<int, string>();
-            enTranslations.Add(1, "Enero");
-            enTranslations.Add(2, "Febrero");
+            esTranslations.Add(1, "Enero");
+            esTranslations.Add(2, "Febrero");
             translations.Add("ES", esTranslations);
 
             return translations;
