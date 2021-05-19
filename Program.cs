@@ -9,11 +9,7 @@ namespace sample_design_patterns
     class Program
     {
         static void Main(string[] args)
-        {
-            //7-Table driven method / Control table
-            MonthWrapper objMonth=new MonthWrapper();
-            string localizedMonthName=objMonth.getMonthName("ES", 1);
-            
+        {            
             //1-Sample of the CircuitBreaker Design Pattern
             CircuitBreaker objCircuit = new CircuitBreaker();
             objCircuit.ExecuteAction(null);
@@ -27,7 +23,9 @@ namespace sample_design_patterns
             CICDPipeline pipeline = new CICDPipeline(new CICDBuildStragey());
             pipeline.Build();
 
-            //4-Sample of State Pattern: the context in this case (Booking) refers to the state to perform state specific behaviour
+            //4-Sample of State Pattern: the context in this case (BookingStateBase and implementations)
+            //  refers to the state to perform state specific behaviour
+            //  Booking just calls the state
             Booking booking = Booking.CreateNew("jacace");
             PendingState state = new PendingState();
             state.Accept(booking); //why not directly call booking.TransitionToState?
@@ -49,6 +47,10 @@ namespace sample_design_patterns
             //6-Factory Method
             CarFactory factory = new CarFactory();
             ICar objCar = factory.BuildCar(CarType.PorscheMacan);
+
+            //7-Table driven method / Control table
+            MonthWrapper objMonth=new MonthWrapper();
+            string localizedMonthName=objMonth.getMonthName("ES", 1);
         }
     }
 
